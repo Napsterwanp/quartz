@@ -2,7 +2,7 @@ name: Deploy Quartz v4 to GitHub Pages
 
 on:
   push:
-    branches: [main] # 或你用的其他分支
+    branches: [v4] # 或你用的其他分支
 
 jobs:
   deploy:
