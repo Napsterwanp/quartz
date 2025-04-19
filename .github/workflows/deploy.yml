@@ -2,30 +2,24 @@ name: Deploy Quartz v4 to GitHub Pages
 
 on:
   push:
-    branches: [v4]
+    branches: [main] # 或你用的其他分支
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 20
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build Quartz site
-        run: npx quartz build --output public
+      - run: npm ci
+      - run: npx quartz build --output public
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: gh-pages   # ✅ 指定 Pages 分支
+          publish_branch: gh-pages
 
