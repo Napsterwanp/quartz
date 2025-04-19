@@ -2,7 +2,7 @@ name: Deploy Quartz v4 to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [v4] # 注意分支名是否和你仓库一致
 
 jobs:
   build-and-deploy:
