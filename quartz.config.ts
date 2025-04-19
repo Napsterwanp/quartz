@@ -8,8 +8,8 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
-    pageTitleSuffix: "",
+    pageTitle: "路羽随心录",
+    pageTitleSuffix: "路羽@napsterwan 写字的地方",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
