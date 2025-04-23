@@ -17,7 +17,8 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "/",
-    siteUrl: "https://napsterwan.com",       // ✅ 添加网站完整地址
+    // @ts-expect-error: Quartz plugins use siteUrl even though it's not typed
+    siteUrl: "https://napsterwan.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -87,7 +88,7 @@ const config: QuartzConfig = {
       }),
       Plugin.Assets(),
       Plugin.Static(),
-      // Plugin.NotFoundPage(),
+      Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
       Plugin.CustomOgImages(),
     ],
