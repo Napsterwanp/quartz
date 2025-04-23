@@ -16,9 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "/",
-    // @ts-expect-error: Quartz plugins use siteUrl even though it's not typed
-    siteUrl: "https://napsterwan.com",
+    baseUrl: "napsterwan.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
