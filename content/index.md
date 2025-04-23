@@ -1,9 +1,8 @@
 ---
-
 title: 路羽随心录
-
 description: 欢迎来到我的数字花园 🌱
-
+aliases:
+  - '[""]'
 ---
 
   
