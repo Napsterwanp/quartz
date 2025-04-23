@@ -9,7 +9,7 @@ import * as Plugin from "./quartz/plugins"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "路羽随心录",
-    pageTitleSuffix: "路羽@napsterwan 写字的地方",
+    pageTitleSuffix: "napsterwan.com",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
@@ -17,6 +17,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "/",
+    siteUrl: "https://napsterwan.com",       // ✅ 添加网站完整地址
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
